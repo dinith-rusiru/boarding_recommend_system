@@ -1,0 +1,5 @@
+export default function WeightSliders({ weights, onChange }) {
+  const labels = { price: 'Price', distance: 'Distance', facilities: 'Facilities', safety: 'Safety' }
+  const update = (key, raw) => { const value = Number(raw); const other = Object.keys(weights).filter(k => k !== key); const oldOther = other.reduce((s,k) => s + weights[k], 0); const remaining = 100 - value; const next = {...weights, [key]: value}; other.forEach(k => next[k] = oldOther ? Math.round(weights[k] / oldOther * remaining) : Math.round(remaining / other.length)); const fix = 100 - Object.values(next).reduce((s,v)=>s+v,0); next[other[0]] += fix; onChange(next) }
+  return <div className="space-y-4">{Object.entries(labels).map(([key,label]) => <label key={key} className="block"><span className="flex justify-between text-sm font-semibold text-slate-200"><span>{label}</span><span className="text-cyan-300">{weights[key]}%</span></span><input aria-label={`${label} priority`} className="mt-2 w-full" type="range" min="0" max="100" value={weights[key]} onChange={e => update(key,e.target.value)}/></label>)}</div>
+}

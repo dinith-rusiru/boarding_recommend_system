@@ -1,0 +1,4 @@
+const icons = { meals: '🍽️', study_space: '📚', attached_bathroom: '🚿', water_24h: '💧', parking: '🚗', furnished: '🛏️', cctv: '📹', gated: '🔒', good_lighting: '💡', landlord_resident: '🏠' }
+const names = { meals: 'Meals', study_space: 'Study space', attached_bathroom: 'Attached bathroom', water_24h: '24h water', parking: 'Parking', furnished: 'Furnished', cctv: 'CCTV', gated: 'Gated', good_lighting: 'Good lighting', landlord_resident: 'Landlord resident' }
+export { icons, names }
+export default function FeatureList({ listing, keys, compact=false }) { return <div className="flex flex-wrap gap-2">{keys.filter(key => String(listing[key]) === '1' || String(listing[key]).toLowerCase() === 'yes').map(key => <span key={key} title={names[key]} className="rounded-full bg-blue-50 px-2 py-1 text-xs text-blue-800">{icons[key]} {!compact && names[key]}</span>)}</div> }

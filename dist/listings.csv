@@ -1,0 +1,13 @@
+listing_id,landlord_id,price_monthly,deposit,latitude,longitude,distance_to_campus_km,room_type,occupants_per_room,gender_policy,available,meals,study_space,attached_bathroom,water_24h,parking,furnished,cctv,gated,good_lighting,landlord_resident,curfew_time,visitors_allowed,avg_rating,review_count,verified,photo_count,contact_no
+SB-001,LL-101,18000,36000,6.824,80.043,0.8,single,1,any,yes,0,1,1,1,1,1,1,1,1,1,10:00 PM,yes,4.7,32,1,8,0771234567
+SB-002,LL-102,14500,29000,6.831,80.048,1.4,shared,2,male,yes,1,1,0,1,1,1,1,1,1,0,11:00 PM,yes,4.5,18,1,6,0712345678
+SB-003,LL-103,22000,44000,6.818,80.038,1.9,single,1,female,yes,1,1,1,1,0,1,1,1,1,1,09:30 PM,no,4.9,41,1,12,0756789012
+SB-004,LL-104,12000,24000,6.836,80.052,2.5,shared,3,any,yes,0,0,0,1,1,0,0,1,1,0,10:30 PM,yes,3.9,9,0,3,0761122334
+SB-005,LL-105,26000,52000,6.812,80.035,3.2,single,1,male,yes,1,1,1,1,1,1,1,1,1,1,10:00 PM,yes,4.8,26,1,10,0789988776
+SB-006,LL-106,16500,33000,6.829,80.055,2.1,shared,2,female,yes,1,0,1,1,0,1,1,0,1,1,09:00 PM,no,4.3,13,1,5,0703344556
+SB-007,LL-107,19500,39000,6.820,80.041,1.1,single,1,any,no,0,1,1,1,1,1,1,1,1,0,10:00 PM,yes,4.6,22,1,7,0774455667
+SB-008,LL-108,10000,20000,6.844,80.060,4.1,shared,4,male,yes,0,0,0,1,1,0,0,0,1,0,11:30 PM,yes,3.6,6,0,2,0725566778
+SB-009,LL-109,28500,57000,6.815,80.032,3.8,single,1,female,yes,1,1,1,1,1,1,1,1,1,1,09:00 PM,no,4.9,54,1,15,0746677889
+SB-010,LL-110,15000,30000,6.833,80.047,1.7,shared,2,any,yes,1,1,0,1,0,0,1,1,1,1,10:30 PM,yes,4.4,20,1,4,0717788990
+SB-011,LL-111,32000,64000,6.805,80.029,4.7,single,1,male,yes,1,1,1,1,1,1,1,1,1,1,10:00 PM,yes,5.0,11,1,9,0758899001
+SB-012,LL-112,17000,34000,6.827,80.050,2.8,shared,2,female,yes,0,1,1,1,0,1,1,1,1,0,09:30 PM,yes,4.2,16,0,5,0769900112
