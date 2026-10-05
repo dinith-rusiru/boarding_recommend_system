@@ -22,9 +22,9 @@ npm test       # run recommendation unit tests
 
 This repository is configured for GitHub Pages at `https://<username>.github.io/boarding_recommend_system/`.
 
-1. Run `npm run build`.
-2. Publish the generated `dist` folder (or configure a GitHub Actions workflow to build and publish it).
-3. In the repository's **Settings → Pages**, choose the branch/folder that contains the generated site.
+1. Push to `main`; the included GitHub Actions workflow builds and deploys the generated `dist` folder.
+2. In the repository's **Settings → Pages**, set **Source** to **GitHub Actions** once.
+3. Open the completed workflow in the repository's **Actions** tab to see its deployment URL.
 
 The app uses hash URLs such as `/#/find` so refreshing a page works on GitHub Pages.
 
