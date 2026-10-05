@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Link, NavLink, Route, Routes, useNavigate } from 'react-router-dom'
+import { HashRouter, Link, NavLink, Route, Routes } from 'react-router-dom'
 import Papa from 'papaparse'
 import './index.css'
 import Home from './pages/Home'
@@ -16,7 +16,8 @@ function Layout({ children }) {
 
 function App() {
   const [listings, setListings] = useState([]); const [loading, setLoading] = useState(true); const [preferences, setPreferences] = useState(defaultPreferences)
-  useEffect(() => { Papa.parse('/listings.csv', { download: true, header: true, skipEmptyLines: true, complete: ({data}) => { setListings(data); setLoading(false) }, error: () => setLoading(false) }) }, [])
+  useEffect(() => { Papa.parse(`${import.meta.env.BASE_URL}listings.csv`, { download: true, header: true, skipEmptyLines: true, complete: ({data}) => { setListings(data); setLoading(false) }, error: () => setLoading(false) }) }, [])
   return <Layout><Routes><Route path="/" element={<Home/>}/><Route path="/find" element={<Preferences preferences={preferences} setPreferences={setPreferences}/>}/><Route path="/results" element={<Results listings={listings} loading={loading} preferences={preferences} setPreferences={setPreferences}/>}/><Route path="/landlord" element={<Landlord onAdd={listing => setListings(old => [{...listing, listing_id: `NEW-${Date.now()}`}, ...old])}/>}/></Routes></Layout>
 }
-createRoot(document.getElementById('root')).render(<BrowserRouter><App/></BrowserRouter>)
+// Hash routing prevents 404s when GitHub Pages receives a direct page refresh.
+createRoot(document.getElementById('root')).render(<HashRouter><App/></HashRouter>)
